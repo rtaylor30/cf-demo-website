@@ -1,0 +1,7 @@
+---
+applications:
+  - name: springpong
+    buildpack: java_buildpack
+    path: target/demo-website-1.0.0-SNAPSHOT.jar
+    services:
+      - mysql

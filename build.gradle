@@ -1,0 +1,32 @@
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath( "org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE" )
+  }
+}
+
+repositories {
+  mavenCentral()
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'spring-boot'
+
+jar {
+  baseName = 'demo-website'
+  version = '1.0.0'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+  compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+  compile group: 'mysql', name: 'mysql-connector-java'
+  compile group: 'de.neuland-bfi', name: 'jade4j', version: '1.2.5'
+}
+
+version = appVersion
