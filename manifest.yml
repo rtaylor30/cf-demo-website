@@ -3,3 +3,4 @@ applications:
   - name: springpong
     buildpack: java_buildpack
     path: build/libs/demo-website-1.0.0.jar
+    memory: 128M
